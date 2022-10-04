@@ -21,6 +21,10 @@
       <h2>My Course Goal</h2>
       <!-- interporlation and bind data-->
       <p>{{ chooseGoal() }}</p>
+
+      <!-- <p v-html="chooseGoal()"></p> -->
+      <!-- with v-html, html tag in chooseGoal() could be integrated -->
+
       <!-- pass in a dynamic value to attribute  -->
       <p>Learn more about <a target="_blank" v-bind:href="vueLink">Vue</a>.</p>
     </section>
