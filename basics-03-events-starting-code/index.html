@@ -21,6 +21,7 @@
       <button v-on:click="add(3)">Add 3</button>
       <button v-on:click="reduce(3)">Reduce 3</button>
       <!-- both call work, with or without brackets (). Bracket is essential when there is parameter -->
+      <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
 
       <!-- input event is "v-on:input" not "v-on:change" !! -->
