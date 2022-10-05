@@ -24,8 +24,17 @@
       <p>Result: {{ counter }}</p>
 
       <!-- input event is "v-on:input" not "v-on:change" !! -->
-      <input type="text" v-on:input="updateName($event, 'Knoblauch')"/>
-      <p>Your name: {{ name }}</p>
+      <!-- key modifier hier: keyup.enter, after the event keyup, could be any key like shift, ctrl... -->
+      <!-- Qn: multiple key? -->
+      <input type="text" v-on:input="updateName($event, 'Knoblauch')" v-on:keyup.enter="confirmName()"/>
+      <p>Your name: {{ confirmedName }}</p>
+
+      <!-- Event Modifier -->
+      <!-- modifier hier prevent => event.preventDefault() -->
+      <form v-on:submit.prevent="handleSubmit()">
+        <input type="text" />
+        <button>Sign Up</button>
+      </form>
     </section>
   </body>
 </html>
